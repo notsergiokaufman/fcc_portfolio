@@ -1,0 +1,167 @@
+:root {
+    --bg-color: #141a30;
+    --fg-color: #f4f7f8;
+    --hl-color: #34cb9d;
+    --alt-color: #71608c;
+    --alt2-color: #7b8993;
+    --grad: rgba(16,20,36,0.95);
+    --grad2: rgba(16,20,36,1);
+
+
+    --nav-height: 3rem;
+
+    --transition: 0.5s ease-in-out;
+    --transition2: 0.25s ease-out;
+
+    --gradient: linear-gradient(90deg, var(--grad2), var(--grad));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    min-width: 100vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    height: var(--nav-height);
+    width: 100vw;
+    display: grid;
+    justify-content: right;
+    align-content: center;
+    background-color: var(--hl-color);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    padding: 1rem;
+    box-shadow: none;
+    transition: all var(--transition);
+}
+
+nav li:hover {
+    background-color: var(--bg-color);
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.8);
+}
+
+nav li > a {
+    color: var(--fg-color)
+}
+
+#welcome-section, #contacts {
+    background-color: var(--bg-color);
+    height: 100vh;
+    color: var(--fg-color);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+img {
+    height: 50vh;
+    width: auto;
+}
+
+@media screen and (min-width:740px) {
+#projects {
+    box-shadow: -2px 0 3px var(--fg-color);
+    padding-top: 0.5rem;
+    background: var(--gradient);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 100vh;
+    }
+}
+
+@media screen and (max-width:740px) {
+    #projects {
+        box-shadow: -2px 0 3px var(--fg-color);
+        padding-top: 0.5rem;
+        background: var(--gradient);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+    img {
+        height: 50vh;
+    }
+    }
+
+#welcome-section h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+}
+
+.russian {
+    font-family: 'Yanone Kaffeesatz';
+    line-height: 1rem;
+}
+
+.h1-add {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.h1-add2 {
+    font-size: 1.5rem;
+    color: var(--bg-color);
+    text-shadow: 0px 50px 5px var(--hl-color);
+}
+
+.project-tile {
+    background-color: var(--bg-color);
+    padding: 10px 5px 0.25rem 5px;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: inset 2px 2px 1px rgba(0,0,0,0.6);
+}
+
+.project-tile span {
+    color: var(--bg-color);
+    transition: color var(--transition2);
+}
+
+.project-tile img {
+    border: solid 2px var(--bg-color);
+    border-radius: 1rem;
+}
+
+.project-tile a {
+    text-decoration: none;
+    color: var(--fg-color);
+    line-height: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.project-tile a:hover span{
+    color: var(--hl-color);
+}
+
+footer {
+    background-color: var(--alt2-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
